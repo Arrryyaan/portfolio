@@ -467,6 +467,12 @@
   }
   @media (prefers-reduced-transparency:reduce){.dock{background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none}}
   @media (prefers-contrast:more){:root{--muted:#3E3E3A;--line:#9A9A93}}
+  .quote{margin:clamp(28px,4vw,48px) 0 0;padding:0 0 0 clamp(18px,2.4vw,28px);border-left:3px solid var(--accent)}
+  .quote blockquote{margin:0}
+  .quote p{margin:0;font-size:clamp(19px,1.9vw,24px);line-height:1.45;letter-spacing:-.01em;color:var(--ink);max-width:40ch}
+  .quote figcaption{margin-top:16px;display:flex;flex-direction:column;gap:3px;font-size:14px;color:var(--muted)}
+  .quote figcaption b{color:var(--ink);font-weight:600}
+  .quote figcaption a{color:inherit;text-underline-offset:3px}
 </style>
 </head>
 <body>
@@ -497,6 +503,7 @@
     <section class="cs-row"><div class="cs-text"><h2>trust before bankid</h2><p>people felt unsure about connecting their bank. we added known partner logos, a familiar bankid button and a shorter explanation.</p></div><div class="ba2"><figure><div class="bph"><div class="pscreen"><img src="../img/sparly-before-bankid.jpg" alt="Before: BankID screen with a long text and swipe button" loading="lazy"></div></div><figcaption>before</figcaption></figure><span class="ba-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><figure><div class="bph"><div class="pscreen"><img src="../img/sparly-bankid.jpg" alt="After: BankID screen with partner logos and a clear Logga in button" loading="lazy"></div></div><figcaption>after</figcaption></figure></div></section>
     <section class="cs-row"><div class="cs-text"><h2>a shorter intro</h2><p>testers skipped the long intro text, so we cut the story from four screens to two, with fewer words.</p></div><div class="ba2"><figure><div class="bph"><div class="pscreen"><img src="../img/sparly-before-intro.jpg" alt="Before: intro screen with a swipe arrow" loading="lazy"></div></div><figcaption>before</figcaption></figure><span class="ba-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><figure><div class="bph"><div class="pscreen"><img src="../img/sparly-intro.jpg" alt="After: intro screen with a Nästa button" loading="lazy"></div></div><figcaption>after</figcaption></figure></div></section>
     <section class="cs-row cs-result"><div class="cs-text"><h2>the result</h2><p>in the second round of tests, people felt much safer, and all six testers we asked preferred the new button. much of the redesign shipped in the live app.</p></div></section>
+    <figure class="quote"><blockquote><p>“The project results were insightful and useful for developing our MVP further. The design proposal is to be implemented to a great extent. Aryan was quick to communicate and conducted the project in a professional manner.”</p></blockquote><figcaption><b>jazgul ismailova</b><span>my mentor on the sparly project · <a href="https://www.linkedin.com/in/aryan-khazanehdarloo-02a15820b/details/recommendations/" target="_blank" rel="noopener">linkedin recommendation ↗</a></span></figcaption></figure>
   </div>
   <a class="pnext" href="logos.html"><span><small>next project</small><b>logos</b></span><span class="go2"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
 
