@@ -470,6 +470,21 @@
   .tee-grid.all{grid-template-columns:repeat(4,1fr)}
   .tee-grid.all .tee.big{grid-column:span 2}
   @media (max-width:700px){.tee-grid.all{grid-template-columns:1fr 1fr}.tee-grid.all .tee.big{grid-column:1/-1}}
+  .tee-rail{position:relative;margin-top:24px}
+  .tee-track{display:flex;gap:clamp(12px,1.4vw,16px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:4px}
+  .tee-track::-webkit-scrollbar{display:none}
+  .tee-track .tee{flex:0 0 clamp(240px,30%,340px);scroll-snap-align:start;aspect-ratio:auto;background:none;border-radius:0;overflow:visible}
+  .tee-track .tee .ti{border-radius:24px;overflow:hidden;background:#F4F4F4;aspect-ratio:1}
+  .tee-track .tee img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+  .tee-track .tee:hover img{transform:scale(1.04)}
+  .tee-track figcaption{margin-top:10px;font-size:.875rem;color:var(--muted)}
+  .tee-nav{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+  .tee-nav button{width:44px;height:44px;border-radius:50%;border:0;background:var(--tile);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .2s,opacity .2s}
+  .tee-nav button:hover{background:var(--tile-2)}
+  .tee-nav button:disabled{opacity:.35;cursor:default}
+  .tee-nav svg{width:16px;height:16px}
+  .tee-nav .prev svg{transform:rotate(180deg)}
+  @media (max-width:700px){.tee-track .tee{flex-basis:72%}}
 </style>
 </head>
 <body>
@@ -494,7 +509,7 @@
     <div><h1>straat t-shirts</h1><p class="lead">t-shirt designs for straat, a streetwear brand built around city culture.</p></div>
     <dl class="pmeta"><div><dt>role</dt><dd>t-shirt designer</dd></div><div><dt>type</dt><dd>apparel design</dd></div><div><dt>collection</dt><dd>10 shirts, 8 cities</dd></div></dl>
   </header>
-  <section class="tees"><div class="tee-grid all"><figure class="tee big"><img src="../img/straat-tee-stockholm.jpg" alt="Black Stockholm t-shirt with a street map and yellow details" loading="lazy"></figure><figure class="tee"><img src="../img/straat-tee-amsterdam.jpg" alt="Black Amsterdam t-shirt with white lettering" loading="lazy"></figure><figure class="tee"><img src="../img/straat-tee-amsterdam-gold.jpg" alt="Black Amsterdam t-shirt with gold lettering and cuffs" loading="lazy"></figure><figure class="tee"><img src="../img/straat-tee-paris.jpg" alt="Black Paris t-shirt with gold details" loading="lazy"></figure><figure class="tee"><img src="../img/straat-tee-marseille.jpg" alt="Black Marseille t-shirt with blue details" loading="lazy"></figure><figure class="tee"><img src="../img/straat-tee-bruxelles.jpg" alt="Black Bruxelles t-shirt with gold details" loading="lazy"></figure><figure class="tee"><img src="../img/straat-tee-rotterdam.jpg" alt="Black Rotterdam t-shirt with orange details" loading="lazy"></figure><figure class="tee big"><img src="../img/straat-tee-stockholm-white.jpg" alt="White Stockholm t-shirt with a beige street map and yellow details" loading="lazy"></figure><figure class="tee"><img src="../img/straat-tee-copenhagen.jpg" alt="Black Copenhagen t-shirt with red lettering" loading="lazy"></figure><figure class="tee"><img src="../img/straat-tee-frankfurt.jpg" alt="Black Frankfurt t-shirt with red details" loading="lazy"></figure></div></section>
+  <section class="tees"><div class="tee-rail"><div class="tee-track"><figure class="tee"><div class="ti"><img src="../img/straat-tee-stockholm.jpg" alt="Black Stockholm t-shirt with a street map and yellow details" loading="lazy"></div><figcaption>stockholm</figcaption></figure><figure class="tee"><div class="ti"><img src="../img/straat-tee-stockholm-white.jpg" alt="White Stockholm t-shirt with a beige street map and yellow details" loading="lazy"></div><figcaption>stockholm, white</figcaption></figure><figure class="tee"><div class="ti"><img src="../img/straat-tee-amsterdam.jpg" alt="Black Amsterdam t-shirt with white lettering" loading="lazy"></div><figcaption>amsterdam</figcaption></figure><figure class="tee"><div class="ti"><img src="../img/straat-tee-amsterdam-gold.jpg" alt="Black Amsterdam t-shirt with gold lettering and cuffs" loading="lazy"></div><figcaption>amsterdam, gold</figcaption></figure><figure class="tee"><div class="ti"><img src="../img/straat-tee-paris.jpg" alt="Black Paris t-shirt with gold details" loading="lazy"></div><figcaption>paris</figcaption></figure><figure class="tee"><div class="ti"><img src="../img/straat-tee-marseille.jpg" alt="Black Marseille t-shirt with blue details" loading="lazy"></div><figcaption>marseille</figcaption></figure><figure class="tee"><div class="ti"><img src="../img/straat-tee-bruxelles.jpg" alt="Black Bruxelles t-shirt with gold details" loading="lazy"></div><figcaption>bruxelles</figcaption></figure><figure class="tee"><div class="ti"><img src="../img/straat-tee-rotterdam.jpg" alt="Black Rotterdam t-shirt with orange details" loading="lazy"></div><figcaption>rotterdam</figcaption></figure><figure class="tee"><div class="ti"><img src="../img/straat-tee-copenhagen.jpg" alt="Black Copenhagen t-shirt with red lettering" loading="lazy"></div><figcaption>copenhagen</figcaption></figure><figure class="tee"><div class="ti"><img src="../img/straat-tee-frankfurt.jpg" alt="Black Frankfurt t-shirt with red details" loading="lazy"></div><figcaption>frankfurt</figcaption></figure></div><div class="tee-nav"><button class="prev" aria-label="Previous shirts"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="next" aria-label="Next shirts"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></section>
   <div class="pbody"><section><h2>the idea</h2><p>each shirt is a statement of where you’re from. it carries its city’s street map, coordinates and country badge, with colours that nod to the city.</p></section></div>
   <div class="pbeh"><a class="pill soft site-btn" href="straat.html">see the straat.clothing website <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
   <a class="pnext" href="complior.html"><span><small>next project</small><b>complior.se</b></span><span class="go2"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
@@ -631,6 +646,13 @@
 
   document.querySelectorAll('.li-soon').forEach(b => b.addEventListener('click', () => say('linkedin link coming soon')));
   document.querySelectorAll('.cv-soon').forEach(b => b.addEventListener('click', () => say('cv coming soon')));
+</script>
+<script>
+document.querySelectorAll('.tee-rail').forEach(r=>{const t=r.querySelector('.tee-track'),p=r.querySelector('.prev'),n=r.querySelector('.next');
+const step=()=>t.querySelector('.tee').getBoundingClientRect().width+16;
+const upd=()=>{p.disabled=t.scrollLeft<4;n.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4};
+p.addEventListener('click',()=>t.scrollBy({left:-step()}));n.addEventListener('click',()=>t.scrollBy({left:step()}));
+t.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();});
 </script>
 </body>
 </html>
