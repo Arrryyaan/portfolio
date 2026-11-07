@@ -397,10 +397,14 @@
   .wcard:hover .logo3 span{transform:scale(1.04)}
   .wcard:hover .logo3 span:nth-child(3n+2){transform:translateY(-14%) scale(1.04)}
   .logo3 img{display:block;width:100%;height:100%;object-fit:cover}
-  .teecy{position:relative;width:min(78%,400px);aspect-ratio:1;border-radius:24px;overflow:hidden;background:#F4F4F4;box-shadow:0 30px 50px -28px rgba(10,10,11,.35)}
-  .teecy img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.22);opacity:0;transition:opacity .7s ease,transform 1.2s cubic-bezier(.2,.8,.2,1)}
-  .teecy img.on{opacity:1}
-  .wcard:hover .teecy img.on{transform:scale(1.28)}
+  .tee3{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+  .tee3 img{position:absolute;width:38%;height:auto;filter:drop-shadow(0 24px 28px rgba(10,10,11,.28));transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+  .tee3 img:nth-child(1){transform:translateX(-78%) rotate(-7deg)}
+  .tee3 img:nth-child(3){transform:translateX(78%) rotate(7deg)}
+  .tee3 img:nth-child(2){z-index:1;width:48%}
+  .wcard:hover .tee3 img:nth-child(1){transform:translateX(-86%) rotate(-10deg)}
+  .wcard:hover .tee3 img:nth-child(3){transform:translateX(86%) rotate(10deg)}
+  .wcard:hover .tee3 img:nth-child(2){transform:translateY(-3%) scale(1.03)}
   /* papers */
   .papers{position:relative;width:100%;height:100%}
   .paper{position:absolute;top:12%;width:46%;aspect-ratio:4/3;background:var(--paper);border-radius:6px;box-shadow:0 24px 40px -22px rgba(10,10,11,.45);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
@@ -576,7 +580,7 @@
           <div><h3>straat t-shirts</h3><p>city t-shirt designs for a streetwear brand</p></div>
           <a class="go" href="work/straat-tees.html" aria-label="Read about straat t-shirts"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
         </header>
-        <div class="wc-show"><div class="teecy"><img src="img/straat-tee-stockholm.jpg" alt="" loading="lazy" class="on"><img src="img/straat-tee-amsterdam-gold.jpg" alt="" loading="lazy"><img src="img/straat-tee-paris.jpg" alt="" loading="lazy"><img src="img/straat-tee-stockholm-white.jpg" alt="" loading="lazy"><img src="img/straat-tee-marseille.jpg" alt="" loading="lazy"><img src="img/straat-tee-rotterdam.jpg" alt="" loading="lazy"><img src="img/straat-tee-copenhagen.jpg" alt="" loading="lazy"><img src="img/straat-tee-amsterdam.jpg" alt="" loading="lazy"><img src="img/straat-tee-bruxelles.jpg" alt="" loading="lazy"><img src="img/straat-tee-frankfurt.jpg" alt="" loading="lazy"></div></div>
+        <div class="wc-show"><div class="tee3"><img src="img/tee-cut-amsterdam.png" alt="Amsterdam t-shirt" loading="lazy"><img src="img/tee-cut-stockholm.png" alt="Stockholm t-shirt" loading="lazy"><img src="img/tee-cut-marseille.png" alt="Marseille t-shirt" loading="lazy"></div></div>
         <div class="meta"><div><h3>straat t-shirts</h3><p>apparel design</p></div><span class="yr">—</span><svg class="si " aria-label="graphic"><use href="#club"/></svg></div>
       </article>
       <article data-href="work/complior.html" class="item wcard" data-d="web" style="view-transition-name:p1">
@@ -761,10 +765,6 @@
   });
 
   document.querySelectorAll('.cv-soon').forEach(b => b.addEventListener('click', () => say('cv coming soon')));
-</script>
-<script>
-(()=>{const c=document.querySelector('.teecy');if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const im=[...c.querySelectorAll('img')];let i=0;
-setInterval(()=>{if(document.hidden)return;im[i].classList.remove('on');i=(i+1)%im.length;im[i].classList.add('on')},1800);})();
 </script>
 </body>
 </html>
