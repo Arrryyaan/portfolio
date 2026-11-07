@@ -397,6 +397,15 @@
   .wcard:hover .logo3 span{transform:scale(1.04)}
   .wcard:hover .logo3 span:nth-child(3n+2){transform:translateY(-14%) scale(1.04)}
   .logo3 img{display:block;width:100%;height:100%;object-fit:cover}
+  .tee3{display:flex;align-items:center;justify-content:center;gap:0;width:100%;height:100%;padding:0 2%}
+  .tee3 span{flex:1;aspect-ratio:1;border-radius:18px;overflow:hidden;background:#F4F4F4;box-shadow:0 24px 40px -24px rgba(10,10,11,.4);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+  .tee3 span:nth-child(2){flex:1.5;z-index:1}
+  .tee3 span:nth-child(1){margin-right:-7%;transform:rotate(-4deg)}
+  .tee3 span:nth-child(3){margin-left:-7%;transform:rotate(4deg)}
+  .tee3 img{display:block;width:100%;height:100%;object-fit:cover}
+  .wcard:hover .tee3 span:nth-child(1){transform:translateX(-8%) rotate(-7deg)}
+  .wcard:hover .tee3 span:nth-child(3){transform:translateX(8%) rotate(7deg)}
+  .wcard:hover .tee3 span:nth-child(2){transform:scale(1.04)}
   /* papers */
   .papers{position:relative;width:100%;height:100%}
   .paper{position:absolute;top:12%;width:46%;aspect-ratio:4/3;background:var(--paper);border-radius:6px;box-shadow:0 24px 40px -22px rgba(10,10,11,.45);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
@@ -482,13 +491,13 @@
   
   <div id="work">
     <h1 class="sec">work</h1>
-    <p class="sub">eleven projects across apps, websites and graphic design.</p>
+    <p class="sub">twelve projects across apps, websites and graphic design.</p>
     <div class="tools">
       <div class="suits" role="group" aria-label="Filter work by discipline">
-        <button class="chip" aria-pressed="true" data-f="all">all <span class="n">11</span></button>
+        <button class="chip" aria-pressed="true" data-f="all">all <span class="n">12</span></button>
         <button class="chip" aria-pressed="false" data-f="app">apps <span class="n">2</span></button>
         <button class="chip" aria-pressed="false" data-f="web">websites <span class="n">7</span></button>
-        <button class="chip" aria-pressed="false" data-f="print">graphic <span class="n">2</span></button>
+        <button class="chip" aria-pressed="false" data-f="print">graphic <span class="n">3</span></button>
       </div>
       <div class="view" role="group" aria-label="Layout">
         <button aria-pressed="true" data-v="grid" aria-label="Grid view"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="5" height="5" rx="1.2"/><rect x="9" y="2" width="5" height="5" rx="1.2"/><rect x="2" y="9" width="5" height="5" rx="1.2"/><rect x="9" y="9" width="5" height="5" rx="1.2"/></svg></button>
@@ -565,6 +574,14 @@
         </header>
         <div class="wc-show"><div class="browser live"><div class="bar"><i></i><i></i><i></i><span class="url">straat.clothing</span></div><div class="bview"><img src="img/straat-full.jpg" alt="STRAAT merch shop, full page: hero, featured picks and the t-shirt product grid" loading="eager" width="1000" height="2147"></div></div></div>
         <div class="meta"><div><h3>straat.clothing</h3><p>e-commerce website</p></div><span class="yr">—</span><svg class="si red" aria-label="ui and web"><use href="#diamond"/></svg></div>
+      </article>
+      <article data-href="work/straat-tees.html" class="item wcard" data-d="print" style="view-transition-name:p16">
+        <header class="wc-head">
+          <div><h3>straat t-shirts</h3><p>city t-shirt designs for a streetwear brand</p></div>
+          <a class="go" href="work/straat-tees.html" aria-label="Read about straat t-shirts"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </header>
+        <div class="wc-show"><div class="tee3"><span><img src="img/straat-tee-amsterdam.jpg" alt="Amsterdam t-shirt" loading="lazy"></span><span><img src="img/straat-tee-stockholm.jpg" alt="Stockholm t-shirt" loading="lazy"></span><span><img src="img/straat-tee-marseille.jpg" alt="Marseille t-shirt" loading="lazy"></span></div></div>
+        <div class="meta"><div><h3>straat t-shirts</h3><p>apparel design</p></div><span class="yr">—</span><svg class="si " aria-label="graphic"><use href="#club"/></svg></div>
       </article>
       <article data-href="work/complior.html" class="item wcard" data-d="web" style="view-transition-name:p1">
         <header class="wc-head">
