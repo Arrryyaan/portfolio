@@ -452,6 +452,21 @@
   }
   @media (prefers-reduced-transparency:reduce){.dock{background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none}}
   @media (prefers-contrast:more){:root{--muted:#3E3E3A;--line:#9A9A93}}
+  .prail{margin-top:clamp(28px,4vw,40px)}
+  .ptrack{display:flex;gap:clamp(12px,1.4vw,16px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+  .ptrack::-webkit-scrollbar{display:none}
+  .ptrack .pg{flex:none;margin:0;height:clamp(360px,40vw,540px);scroll-snap-align:start;border-radius:18px;overflow:hidden;box-shadow:none}
+  .ptrack .pg img{display:block;height:100%;width:auto;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+  .ptrack .pg:hover img{transform:scale(1.03)}
+  .tee-nav{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+  .tee-nav button{width:44px;height:44px;border-radius:50%;border:0;background:var(--tile);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .2s,opacity .2s}
+  .tee-nav button:hover{background:var(--tile-2)}
+  .tee-nav button:disabled{opacity:.35;cursor:default}
+  .tee-nav svg{width:16px;height:16px}
+  .tee-nav .prev svg{transform:rotate(180deg)}
+  .prail+.pbody{margin-top:clamp(24px,3vw,36px)}
+  .prail+.pbody>section{padding-top:0}
+  @media (max-width:560px){.ptrack .pg{height:380px}}
 </style>
 </head>
 <body>
@@ -476,7 +491,7 @@
     <div><h1>poster art</h1><p class="lead">freelance posters and edits since 2016, including a match poster for fc barcelona. i’ve made over 200 posters, and these are some of my favourites.</p></div>
     <dl class="pmeta"><div><dt>role</dt><dd>graphic designer</dd></div><div><dt>type</dt><dd>graphic design</dd></div><div><dt>year</dt><dd>2016–now</dd></div></dl>
   </header>
-  <div class="pv pv-posters"><figure class="pg"><img src="../img/poster-fcb-xavi.jpg" alt="FC Barcelona: Real Madrid vs Barça match poster with Xavi" loading="lazy"></figure><figure class="pg"><img src="../img/poster-matchday.jpg" alt="Matchday poster, FC Barcelona vs Young Boys" loading="lazy"></figure><figure class="pg"><img src="../img/poster-700k.jpg" alt="700K followers milestone poster" loading="lazy"></figure><figure class="pg"><img src="../img/poster-messi-locker.jpg" alt="Messi locker room trophy edit" loading="lazy"></figure></div>
+  <div class="prail"><div class="ptrack"><figure class="pg"><img src="../img/poster-fcb-xavi.jpg" alt="FC Barcelona: Real Madrid vs Barça match poster with Xavi" loading="lazy"></figure><figure class="pg"><img src="../img/poster-pedri-matchday.jpg" alt="Matchday poster, AS Monaco vs FC Barcelona, with Pedri" loading="lazy"></figure><figure class="pg"><img src="../img/poster-messi-maradona.jpg" alt="Edit of Messi and Maradona celebrating together in Argentina shirts" loading="lazy"></figure><figure class="pg"><img src="../img/poster-matchday.jpg" alt="Matchday poster, FC Barcelona vs Young Boys" loading="lazy"></figure><figure class="pg"><img src="../img/poster-pedri-iniesta.jpg" alt="Edit of Iniesta handing the number 8 to Pedri at a substitution" loading="lazy"></figure><figure class="pg"><img src="../img/poster-700k.jpg" alt="700K followers milestone poster" loading="lazy"></figure><figure class="pg"><img src="../img/poster-messi-ballondor.jpg" alt="Messi on a leather chair surrounded by Ballon d’Or trophies" loading="lazy"></figure><figure class="pg"><img src="../img/poster-lewandowski.jpg" alt="Lewandowski celebration edit in Barça’s black kit" loading="lazy"></figure><figure class="pg"><img src="../img/poster-messi-locker.jpg" alt="Messi locker room trophy edit" loading="lazy"></figure></div><div class="tee-nav"><button class="prev" aria-label="Previous posters"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="next" aria-label="Next posters"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
   <div class="pbody"><section><h2>overview</h2><p>graphic design is where it all started. back in 2016 i began doing freelance work, designing posters and edits for clients, and i’ve kept at it ever since.</p></section><section><h2>fc barcelona</h2><p>in 2022 i designed an official matchday poster for fc barcelona, made for the club itself, for el clásico against real madrid.</p></section></div>
   <div class="pbeh"><a class="pill soft site-btn" href="https://www.behance.net/AryanKhazaneh" target="_blank" rel="noopener">more on behance <svg viewBox="0 0 16 16"><path d="M5 11l6-6M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
   <a class="pnext" href="sparly.html"><span><small>next project</small><b>sparly</b></span><span class="go2"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
@@ -613,6 +628,12 @@
 
   document.querySelectorAll('.li-soon').forEach(b => b.addEventListener('click', () => say('linkedin link coming soon')));
   document.querySelectorAll('.cv-soon').forEach(b => b.addEventListener('click', () => say('cv coming soon')));
+</script>
+<script>
+document.querySelectorAll('.prail').forEach(r=>{const t=r.querySelector('.ptrack'),p=r.querySelector('.prev'),n=r.querySelector('.next');
+const upd=()=>{p.disabled=t.scrollLeft<4;n.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4};
+p.addEventListener('click',()=>t.scrollBy({left:-t.clientWidth*.7}));n.addEventListener('click',()=>t.scrollBy({left:t.clientWidth*.7}));
+t.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);t.querySelectorAll('img').forEach(i=>i.addEventListener('load',upd));upd();});
 </script>
 </body>
 </html>
