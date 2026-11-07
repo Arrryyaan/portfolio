@@ -478,13 +478,15 @@
   .tee-track .tee img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
   .tee-track .tee:hover img{transform:scale(1.04)}
   .tee-track figcaption{margin-top:10px;font-size:.875rem;color:var(--muted)}
-  .tee-nav{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+  .tee-nav{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+  .tees+.pbody{margin-top:clamp(20px,3vw,32px)}
   .tee-nav button{width:44px;height:44px;border-radius:50%;border:0;background:var(--tile);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .2s,opacity .2s}
   .tee-nav button:hover{background:var(--tile-2)}
   .tee-nav button:disabled{opacity:.35;cursor:default}
   .tee-nav svg{width:16px;height:16px}
   .tee-nav .prev svg{transform:rotate(180deg)}
   @media (max-width:700px){.tee-track .tee{flex-basis:72%}}
+  .tees,.tees+.pbody>section{padding-top:0}
 </style>
 </head>
 <body>
