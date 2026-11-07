@@ -467,6 +467,15 @@
   }
   @media (prefers-reduced-transparency:reduce){.dock{background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none}}
   @media (prefers-contrast:more){:root{--muted:#3E3E3A;--line:#9A9A93}}
+  .tees{margin-top:clamp(48px,7vw,88px)}
+  .tees-text h2{font-size:1rem;font-weight:600;letter-spacing:-.01em;margin-bottom:10px}
+  .tees-text p{color:var(--muted);line-height:1.65;max-width:52ch}
+  .tee-grid{margin-top:24px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:clamp(10px,1.4vw,16px)}
+  .tee{margin:0;border-radius:24px;overflow:hidden;background:#F4F4F4;aspect-ratio:1}
+  .tee.big{grid-row:span 2;aspect-ratio:auto}
+  .tee img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+  .tee:hover img{transform:scale(1.04)}
+  @media (max-width:700px){.tee-grid{grid-template-columns:1fr 1fr}.tee.big{grid-column:1/-1;grid-row:auto;aspect-ratio:1}}
 </style>
 </head>
 <body>
@@ -490,8 +499,9 @@
   <header class="phead" id="work">
     <div><h1>straat.clothing</h1><p class="lead">an online shop for straat, a streetwear clothing brand.</p></div>
   </header>
-  <div class="pinfo"><div class="side"><h2>my role</h2><ul><li>designer</li><li>front-end developer</li></ul><h2>tools</h2><ul><li>figma</li><li>wordpress</li></ul></div><div class="ctx"><h2>context</h2><p>straat is a streetwear brand built around city culture and identity. its designs feature cities like stockholm, amsterdam, paris, marseille and rotterdam, so what you wear shows where you’re from.</p><p>i designed the online shop to put the clothes, and the people wearing them, front and centre.</p><p>besides the design, i also wrote some of the css and php for the shop.</p><a class="pill soft site-btn" href="https://straat.clothing/" target="_blank" rel="noopener">website <svg viewBox="0 0 16 16"><path d="M5 11l6-6M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
+  <div class="pinfo"><div class="side"><h2>my role</h2><ul><li>t-shirt designer</li><li>web designer</li><li>front-end developer</li></ul><h2>tools</h2><ul><li>figma</li><li>wordpress</li></ul></div><div class="ctx"><h2>context</h2><p>straat is a streetwear brand built around city culture and identity. its designs feature cities like stockholm, amsterdam, paris, marseille and rotterdam, so what you wear shows where you’re from.</p><p>i designed the online shop to put the clothes, and the people wearing them, front and centre.</p><p>besides the design, i also wrote some of the css and php for the shop.</p><a class="pill soft site-btn" href="https://straat.clothing/" target="_blank" rel="noopener">website <svg viewBox="0 0 16 16"><path d="M5 11l6-6M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
   <div class="pv pv-site"><div class="browser"><div class="bar"><i></i><i></i><i></i><span class="url">straat.clothing</span></div><div class="bview"><img src="../img/straat-full.jpg" alt="straat, full page" loading="eager"></div></div><p class="pv-hint">scroll inside the window to see the whole page</p></div>
+  <section class="tees"><div class="tees-text"><h2>the t-shirts</h2><p>i also designed the t-shirts. each one carries its city’s street map, coordinates and country badge, with colours that nod to the city.</p></div><div class="tee-grid"><figure class="tee big"><img src="../img/straat-tee-stockholm.jpg" alt="Black STRAAT t-shirt with a Stockholm street map, coordinates and a yellow SE badge" loading="lazy"></figure><figure class="tee"><img src="../img/straat-tee-amsterdam.jpg" alt="Black STRAAT t-shirt with an Amsterdam street map and a white NL badge" loading="lazy"></figure><figure class="tee"><img src="../img/straat-tee-bruxelles.jpg" alt="Black STRAAT t-shirt with a Brussels street map and gold details" loading="lazy"></figure><figure class="tee"><img src="../img/straat-tee-marseille.jpg" alt="Black STRAAT t-shirt with a Marseille street map and blue details" loading="lazy"></figure><figure class="tee"><img src="../img/straat-tee-frankfurt.jpg" alt="Black STRAAT t-shirt with a Frankfurt street map and red details" loading="lazy"></figure></div></section>
   <a class="pnext" href="complior.html"><span><small>next project</small><b>complior.se</b></span><span class="go2"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
 
   <section class="contact" id="contact">
